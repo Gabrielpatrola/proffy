@@ -38,7 +38,7 @@
   width: 30rem;
   height: 10.4rem;
   border-radius: 0.8rem;
-  font: 700 2.0rem Archivo;
+  font: 700 2rem Archivo;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -75,18 +75,18 @@
   margin-right: 2.4rem;
 }
 
-.total-conections {
+.total-connections {
   font-size: 1.4rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.total-conections img {
+.total-connections img {
   margin-left: 0.8rem;
 }
 
-@media(min-width:1100px) {
+@media (min-width: 1100px) {
   #page-landing-content {
     max-width: 1100px;
     display: grid;
@@ -117,7 +117,7 @@
   .buttons-container a {
     font-size: 2.4rem;
   }
-  .total-conections {
+  .total-connections {
     grid-area: total;
     justify-self: end;
   }
