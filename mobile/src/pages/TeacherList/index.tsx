@@ -13,7 +13,7 @@ import styles from "./styles";
 function TeacherList() {
   const [teachers, setTeachers] = useState([]);
   const [favorites, setFavorites] = useState<number[]>([]);
-  const [isFiltersVisible, setFiltersVisible] = useState(false);
+  const [isFiltersVisible, setIsFiltersVisible] = useState(false);
 
   const [subject, setSubject] = useState("");
   const [weekDay, setWeekDay] = useState("");
@@ -34,7 +34,7 @@ function TeacherList() {
   }
 
   function handleToggleFiltersVisible() {
-    setFiltersVisible(!isFiltersVisible);
+    setIsFiltersVisible(!isFiltersVisible);
   }
 
   async function handleFilterSubmit() {
@@ -46,7 +46,7 @@ function TeacherList() {
         time,
       },
     });
-    setFiltersVisible(false);
+    setIsFiltersVisible(false);
     setTeachers(response.data);
   }
 
@@ -78,7 +78,7 @@ function TeacherList() {
                   style={styles.input}
                   value={weekDay}
                   onChangeText={(text) => setWeekDay(text)}
-                  placeholder="Dia o dia?"
+                  placeholder="Qual o dia?"
                   placeholderTextColor="#c1bccc"
                 />
               </View>
@@ -89,7 +89,7 @@ function TeacherList() {
                   style={styles.input}
                   value={time}
                   onChangeText={(text) => setTime(text)}
-                  placeholder="Dia horário?"
+                  placeholder="Qual o horário?"
                   placeholderTextColor="#c1bccc"
                 />
               </View>
